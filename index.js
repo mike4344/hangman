@@ -21,11 +21,11 @@ let userGuess = (gameWord, answer = null) =>{
         }
     }
     console.log(blank.join(""))
+    if(!blank.includes("_")){
+        console.log("winner")
+       return rl.close()}
     rl.question("guess a letter ", answer=>{
-        if(!blank.includes("_")){
-            console.log("winner")
-           return rl.close()
-        }
+
         userGuess(gameWord, answer)
     })
 }

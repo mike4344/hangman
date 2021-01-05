@@ -16,7 +16,7 @@ let generateButton = () =>{
         style="font-size:45px;color:red;width:55px;height:60px;background-color:rgb(0,255,0);"
         class="btn btn-lg btn-primary m-2"
         id= `+ letter + `
-        onclick="userGuess('` + letter + `'); image()"
+        onclick="userGuess('` + letter + `'); image(); falsify('` + letter +`')"
         >
         ` + letter + `
         </button>
@@ -27,7 +27,13 @@ let generateButton = () =>{
         if(n > 8){
             location.reload()
         }
-            pic.src=`images/step${n}.jpg`}
+            pic.src=`images/step${n}.jpg`
+        }
+    function falsify (letter){
+        let button = document.getElementById(`${letter}`)
+        button.setAttribute("disabled", true)
+        button.style.background = "black"
+    }
 
     generateButton()
     function  userGuess(answer){

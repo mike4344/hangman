@@ -23,7 +23,6 @@ let generateButton = () =>{
         `).join("")
         document.getElementById('keyboard').innerHTML = buttonsHTML
     }
-    let isthere = true
     function image(){
         if(n > 8){
             location.reload()
@@ -36,7 +35,6 @@ let generateButton = () =>{
         if(!gameWord.includes(answer)){
             n = n + 1
         }
-
     for (let i = 0; i < guessWord.length; i++){
         if (guessWord[i].includes(answer)){
             blank[i] = answer

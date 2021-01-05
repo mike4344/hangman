@@ -7,11 +7,11 @@ let display = document.getElementById("guessword")
 let blankword = ["_","_","_","_","_","_","_","_","_","_","_","_",]
 let gameWord = randomWordChoice(wordBank)
 let blank = blankword.slice(0, gameWord.length)
-let reset = document.getElementById('reset')
 let generateButton = () =>{
     let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split("").map(letter=>
         `
         <button
+        style="font-size:45px;color:red;width:70px;height:70px;background-color:rgb(0,255,0);"
         class="btn btn-lg btn-primary m-2"
         id= `+ letter + `
         onclick="userGuess('` + letter + `')"
